@@ -1,0 +1,14 @@
+HttpHeaders headers = new HttpHeaders();
+headers.setContentType(MediaType.APPLICATION_JSON);
+
+Map<String, String> request = Map.of(
+    "name", "John Doe",
+    "regNo", "REG12347",
+    "email", "john@example.com"
+);
+
+HttpEntity<Map<String, String>> entity = new HttpEntity<>(request, headers);
+
+ResponseEntity<WebhookResponse> response = restTemplate.postForEntity(
+    "https://bfhldevapigw.healthrx.co.in/hiring/generateWebhook",
+    entity, WebhookResponse.class);

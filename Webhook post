@@ -1,0 +1,8 @@
+headers.set("Authorization", token);
+
+HttpEntity<Map<String, Object>> webhookRequest = new HttpEntity<>(Map.of(
+    "regNo", "REG12347",
+    "outcome", result
+), headers);
+
+restTemplate.postForEntity(webhookUrl, webhookRequest, String.class);

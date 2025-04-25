@@ -6,5 +6,5 @@ This application interacts with a remote API on startup, solves either a "Mutual
 
 1. Clone the repo:
    ```bash
-   git clone https://github.com/your-username/followers-app.git
+   git clone https://github.com/har-58/followers-app.git
    cd followers-app
